@@ -27,7 +27,6 @@ def weigh_pokemons(filename, weight):
     with open(filename,encoding = "utf-8") as load_f:
         pokemon_jason = json.load(load_f)
     weight_name = [[x["weight"],x["name"]]for x in pokemon_jason["pokemon"]]
-    print(weight_name)
     name = []
     for x in weight_name:
         w = float(x[0].split(' ')[0])
