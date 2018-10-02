@@ -19,8 +19,8 @@ def histogram_times(filename):
             time = re.sub('[^0123456789:]+' ,'',incident[1])
             if len(time.split(':')[0]) != 0:
                 time1 = int(time.split(':')[0])
-            if time1 < 24:
-                crash_each_day[time1] += 1
+                if time1 < 24:
+                    crash_each_day[time1] += 1
     return crash_each_day
 
 def weigh_pokemons(filename, weight):
