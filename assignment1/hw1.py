@@ -48,7 +48,7 @@ def single_type_candy_count(filename):
 
 def reflections_and_projections(points):
     returnArray = np.zeros(points.shape)
-    for i in range(0,points.size/2):
+    for i in range(0,int(points.size/2)):
         returnArray[0,i] = (6 - 3 * points[0,i] - points[1,i])/10
         returnArray[1,i] = (18 - 9 * points[0,i] - 3 * points[1,i])/10
     return returnArray
